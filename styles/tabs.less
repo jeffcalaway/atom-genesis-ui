@@ -1,0 +1,154 @@
+@import "ui-variables";
+@tab-radius: 0;
+@modified-icon-width: 8px;
+@tab-skew: 0;
+@tab-top-padding: 0;
+@tab-border: 0;
+@tab-bar-bottom-border-color: #111;
+@tab-max-width: 160px;
+
+.tab-bar {
+  height: @tab-height + @tab-top-padding;
+  background: @tab-bar-background-color;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #24282F;
+    background-color: @tab-background-color-active;
+    pointer-events: none;
+  }
+
+  .tab {
+    position: relative;
+    max-width: @tab-max-width;
+    height: @tab-height;
+    line-height: @tab-height;
+    padding: 0;
+    margin: 0 20px 0 5px;
+    color: @text-color;
+    text-align: center;
+
+    transition: color .1s ease-in;
+    border: none;
+
+    &, &:before, &:after {
+      height: @tab-height;
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      width: 25px;
+      height: @tab-height;
+    }
+
+    // left angled edge
+    &:before {
+      left: -14px;
+    //   border-top-left-radius: @tab-radius;
+    //   box-shadow: inset 1px 1px 0 @tab-border-color, -4px 0px 4px rgba(0,0,0,.1);
+    //   -webkit-transform: skewX(-@tab-skew);
+    }
+
+    // right angled edge
+    &:after {
+      right: -14px;
+    }
+
+    .close-icon {
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      right: 0;
+      z-index: 3;
+      text-align: right;
+      line-height: @tab-height;
+      color: transparent;
+      transform:scale(0);
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    &:hover{
+        .close-icon{
+            color: @text-color;
+            transform:scale(1);
+        }
+    }
+
+    &.modified:not(:hover) .close-icon {
+      right: 0;
+      top: @tab-height/2 - @modified-icon-width/2 + 1px;
+      width: @modified-icon-width;
+      height: @modified-icon-width;
+    }
+
+    &.modified:hover .close-icon:hover {
+      color: @text-color-highlight;
+    }
+
+    .title{
+      position: relative;
+      z-index: 1;
+      padding-right: 10px
+    }
+  }
+
+  .tab.active {
+    z-index: 1;
+    color: @text-color-highlight;
+
+    .close-icon {
+      line-height: @tab-height - 1px;
+      color: @text-color;
+    }
+
+    &, &:before, &:after {
+      background-color:@tab-background-color-active;
+      height: @tab-height + 1px;
+    }
+
+    &:before {
+      border-left:1px solid #24282F;
+    }
+
+    &:after {
+      border-right:1px solid #24282F;
+    }
+  }
+
+  .tab:hover {
+    color: @text-color-highlight;
+  }
+
+  .tab.active:hover .close-icon {
+    color: @text-color;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  .placeholder {
+    height: @tab-height + @tab-top-padding;
+    margin-left: -9px; // center between tabs
+    pointer-events: none;
+    &:after {
+      top: @tab-height + @tab-top-padding - 2px;
+    }
+  }
+}
