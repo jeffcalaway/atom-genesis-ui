@@ -39,9 +39,10 @@
   .generate-list-item-status-color(@text-color-modified, modified);
   .generate-list-item-status-color(@text-color-removed, removed);
 
-  li:not(.list-nested-item).selected,
-  li.list-nested-item.selected > .list-item {
-    .text(selected);
+  li:not(.list-nested-item).selected:not(.collapsed),
+  li.list-nested-item.selected:not(.collapsed) > .list-item {
+    color:@white;
+    font-weight:600;
   }
 }
 

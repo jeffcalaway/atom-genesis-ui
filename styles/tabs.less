@@ -37,8 +37,7 @@
     margin: 0 20px 0 5px;
     color: @text-color;
     text-align: center;
-
-    transition: color .1s ease-in;
+    transition: all 0.2s ease-in-out;
     border: none;
 
     &, &:before, &:after {
@@ -67,9 +66,6 @@
     }
 
     .close-icon {
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
       right: 0;
       z-index: 3;
@@ -87,6 +83,20 @@
         .close-icon{
             color: @text-color;
             transform:scale(1);
+        }
+    }
+
+    &.modified{
+        .close-icon{
+            transform:scale(1);
+        }
+    }
+
+    &:not(.active){
+        opacity:0.3;
+
+        &.modified,&:hover{
+            opacity:1;
         }
     }
 

@@ -63,3 +63,23 @@ atom-panel, .tool-panel {
     .btn-background(@bg, @hover, @selected, @text);
   }
 }
+
+
+.status-bar{
+    .status-bar-left,.status-bar-right > *{
+        opacity:0.3;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .status-bar-right > *{
+        &.text-error,&.text-warning{
+            opacity:1;
+        }
+    }
+
+    &:hover{
+        .status-bar-left,.status-bar-right > *{
+            opacity:1;
+        }
+    }
+}

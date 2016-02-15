@@ -5,8 +5,7 @@
   background: @tree-view-background-color;
 
   .selected:before {
-    background: #343943;
-    // box-shadow: inset -3px 0 0 rgba(0,0,0, .05);
+    background:none;
   }
 }
 
@@ -34,4 +33,48 @@
   .focusable-panel {
     // box-shadow: inset 3px 0 0 rgba(0,0,0, .05);
   }
+}
+
+.tree-view{
+    // transition: all 0.2s ease-in-out;
+    // opacity:0.5;
+    // &:hover{
+    //     opacity:1;
+    // }
+
+    li{
+        &,> span{
+            transition: all 0.2s ease-in-out;
+        }
+
+        &:hover{
+            > span{
+                font-size:12px;
+                text-shadow:0 2px 2px darken(@tree-view-background-color,5%);
+            }
+
+            &:not(.selected){
+                > span{
+                    color:@white;
+                }
+            }
+        }
+    }
+
+    &:not(:hover){
+        li{
+            &.collapsed, &.project-root > ol > .file > span{
+                opacity:0.15;
+            }
+        }
+    }
+
+
+    li:not(.project-root) .entries{
+        border-left:1px solid lighten(@tree-view-background-color,2%);
+    }
+}
+
+.status-ignored,.status-ignored > *{
+    color:lighten(@tree-view-background-color,12%) !important;
 }
