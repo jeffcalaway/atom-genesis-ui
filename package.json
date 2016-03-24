@@ -1,7 +1,7 @@
 {
   "name": "genesis-ui",
   "theme": "ui",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "UI theme for Genesis Syntax",
   "license": "MIT",
   "repository": "https://github.com/jmcalaway/atom-genesis-ui",
