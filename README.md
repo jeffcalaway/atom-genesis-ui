@@ -6,4 +6,6 @@ As of 02/15/16, this UI features a <b><i>Focus Mode*</i></b> that lowers the opa
 
 * Focus Mode will, in a future update, be an optional setting for this theme. If you've been using the Genesis UI since before the conception of Focus Mode and are not happy with this mode's temporary obligation, feel free to contact me via GitHub. For now, enjoy a clutter-free workspace!
 
-<!-- ![](https://f.cloud.github.com/assets/671378/2265086/c6897dba-9e7b-11e3-945d-551cac610717.png) -->
+* Check out the <a href="https://atom.io/themes/genesis-syntax">Genesis Syntax Theme</a>
+
+![A screenshot of your theme](https://raw.githubusercontent.com/jmcalaway/atom-genesis-ui/master/genesis-ui-sample.jpg)
