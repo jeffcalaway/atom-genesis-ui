@@ -38,10 +38,11 @@
     color: @text-color;
     text-align: center;
     border: none;
+    transition: all 0.2s ease-in-out;
 
     &, &:before, &:after {
       height: @tab-height;
-      transition: all 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
     }
 
     &:before, &:after {
