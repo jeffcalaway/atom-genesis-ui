@@ -19,3 +19,27 @@
   .text(highlight);
   background: @background-color-highlight;
 }
+
+.hide-spotified .atom-spotified{
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    opacity:0.2;
+
+    &:hover{
+        opacity:1;
+    }
+
+    .cover{
+        flex-basis: 26px;
+    }
+
+    .info{
+        padding:1px 10px;
+
+        div{
+            font-size: 8px !important;
+        }
+    }
+}

@@ -61,15 +61,6 @@
         }
     }
 
-    &:not(:hover){
-        li{
-            &.collapsed, &.project-root > ol > .file > span{
-                opacity:0.15;
-            }
-        }
-    }
-
-
     li:not(.project-root) .entries{
         border-left:1px solid lighten(@tree-view-background-color,2%);
     }
@@ -77,4 +68,16 @@
 
 .status-ignored,.status-ignored > *{
     color:lighten(@tree-view-background-color,12%) !important;
+}
+
+.hide-tree-items{
+    .tree-view{
+        &:not(:hover){
+            li{
+                &.collapsed, &.project-root > ol > .file > span{
+                    opacity:0.15;
+                }
+            }
+        }
+    }
 }

@@ -4,6 +4,7 @@
   "version": "0.3.3",
   "description": "UI theme for Genesis Syntax",
   "license": "MIT",
+  "main":"lib/settings",
   "repository": "https://github.com/jmcalaway/atom-genesis-ui",
   "engines": {
     "atom": ">0.40.0"

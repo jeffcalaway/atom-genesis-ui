@@ -93,13 +93,13 @@
         }
     }
 
-    &:not(.active){
-        opacity:0.3;
-
-        &.modified,&:hover{
-            opacity:1;
-        }
-    }
+    // &:not(.active){
+    //     opacity:0.3;
+    //
+    //     &.modified,&:hover{
+    //         opacity:1;
+    //     }
+    // }
 
     &.modified:not(:hover) .close-icon {
       right: 0;
@@ -162,4 +162,16 @@
       top: @tab-height + @tab-top-padding - 2px;
     }
   }
+}
+
+
+.hide-idle-tabs{
+    .tab-bar .tab:not(.active){
+        opacity:0.3;
+        transition: all 0.2s ease-in-out;
+
+        &.modified,&:hover{
+            opacity:1;
+        }
+    }
 }
