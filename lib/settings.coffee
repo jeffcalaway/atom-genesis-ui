@@ -23,6 +23,14 @@ module.exports =
                     description: 'Reduces the opacity of Spotified package'
                     type: 'boolean'
                     default: false
+        treeView:
+            type: 'object'
+            properties:
+                toggleHovers:
+                    title: 'Toggle Tree Item Hover Effect'
+                    description: 'Adds a rollover hover effect to files/folders in tree view'
+                    type: 'boolean'
+                    default: true
 
     activate: (state) ->
         atom.themes.onDidChangeActiveThemes ->

@@ -72,3 +72,15 @@ module.exports =
 			hideSpotifiedPackage(atom.config.get('genesis-ui.distractionFree.hideSpotified'))
 
 		hideSpotifiedPackage(atom.config.get('genesis-ui.distractionFree.hideSpotified'))
+
+		# TreeView Hover
+		toggleItemHoverEffect = (boolean) ->
+			if boolean
+				root.classList.add('add-tree-item-hover')
+			else
+				root.classList.remove('add-tree-item-hover')
+
+		atom.config.onDidChange 'genesis-ui.treeView.toggleHovers', ->
+			toggleItemHoverEffect(atom.config.get('genesis-ui.treeView.toggleHovers'))
+
+		toggleItemHoverEffect(atom.config.get('genesis-ui.treeView.toggleHovers'))

@@ -48,11 +48,6 @@
         }
 
         &:hover{
-            > span{
-                font-size:12px;
-                text-shadow:0 2px 2px darken(@tree-view-background-color,5%);
-            }
-
             &:not(.selected){
                 > span{
                     color:@white;
@@ -63,6 +58,19 @@
 
     li:not(.project-root) .entries{
         border-left:1px solid lighten(@tree-view-background-color,2%);
+    }
+}
+
+.add-tree-item-hover{
+    .tree-view{
+        li{
+            &:hover{
+                > span{
+                    font-size:12px;
+                    text-shadow:0 2px 2px darken(@tree-view-background-color,5%);
+                }
+            }
+        }
     }
 }
 
