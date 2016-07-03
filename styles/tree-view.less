@@ -79,13 +79,14 @@
 }
 
 .hide-tree-items{
-    .tree-view{
-        &:not(:hover){
-            li{
-                &.collapsed, &.project-root > ol > .file > span{
-                    opacity:0.15;
-                }
-            }
+  .tree-view:not(:hover) {
+    > .project-root > .entries {
+      .file:not(.selected),
+      > .directory.collapsed > .header {
+        > span {
+          opacity: 0.15;
         }
+      }
     }
+  }
 }
