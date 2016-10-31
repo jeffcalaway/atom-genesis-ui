@@ -89,7 +89,13 @@
 
 // Sizes
 
-@font-size: 11px;
+@font-size: 1.0vmax);
+// For min/max font sizes:
+//MIN SIZE:
+font-size: calc(0.45em + 1.0vmax);
+//MAX SIZE: 
+@media (min-width: 2000px){ :root { font-size: 24px;  } }
+
 @input-font-size: 14px;
 
 @disclosure-arrow-size: 12px;
